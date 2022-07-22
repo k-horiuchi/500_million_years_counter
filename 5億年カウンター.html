@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>五億年カウンター</title>
+    </head>
+    <body>
+        <div id="timer"></div>
+        <button id="start" onclick="start()">カウント開始</button>
+        <script>
+            const start = (time = 15768000000000000n, second = 1000) => {
+                document.querySelector("#start").style.display ="none"
+                document.querySelector("#timer").innerText = time
+                setInterval(()=>{
+                    time--
+                    document.querySelector("#timer").innerText = time
+                }, second)
+            }
+        </script>
+    </body>
+</html>
