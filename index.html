@@ -10,8 +10,10 @@
                 document.querySelector("#start").style.display ="none"
                 document.querySelector("#timer").innerText = time
                 setInterval(()=>{
-                    time--
-                    document.querySelector("#timer").innerText = time
+                    if(time != 0) {
+                        time--
+                        document.querySelector("#timer").innerText = time
+                    }
                 }, second)
             }
         </script>
